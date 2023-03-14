@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+body {
+    background-image: url(../img/bg1b.png);
+    background-size: 100vw 100vh;
+    background-repeat: repeat-y;
+}
+
+header {
+    height: 100px;
+    color: #fff;
+    position: fixed;
+}
+/*Neve*/
+.snow, .snow:before, .snow:after {
+    position: absolute;
+    top: -650px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: 
+    radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+    radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
+    radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
+    radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
+    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
+    radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
+    radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
+    radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+    background-size: 650px 650px;
+    animation: snow 3s linear infinite;
+    content: "";
+  }
+  
+  .snow:after {
+    margin-left: -250px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-duration: 6s;
+    animation-direction: reverse;
+  }
+  
+  .snow:before {
+      margin-left: -350px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-duration: 9s;
+    animation-direction: reverse;
+  }
+  
+  @keyframes snow {
+    to {
+      transform: translateY(650px);
+    }
+  }
+/*Neve*/
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+}
+
+.doutor-estranho {
+    position: absolute;
+    width: 300px;
+    animation: transformScale 4s ease ;
+    transform: scale(1.2);
+}
+
+.portal {
+    width: 620px;
+    position: absolute;
+    animation: rotation 4s infinite linear;
+}
+
+.bgportal{
+    width: 715px;
+    position: absolute;
+}
+
+section {
+    height: 100vh;
+}
+
+section:nth-child(2) {
+    background-color: black;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+/************ INITIAL PAGE *************/
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 90vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    width: 47vw;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content h3 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.container h3 span {
+    font-size: 40px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #fff;
+}
+
+.content p:nth-child(3) {
+    font-size: 22px;
+    margin-top: 100px;
+    font-weight: 500;
+}
+
+.content p span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/************ LOGO *************/
+
+.logo  {
+    border: 5px solid #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 20px 0 0 20px;
+    position: fixed;
+}
+
+.vertical-1 {
+    position: absolute;
+    width: 25px;
+    height: 68px;
+    border: 2px solid transparent;
+    border-right: 6px solid white;
+    border-top: none;
+    border-bottom: 3px solid white;
+    border-radius: 50%;
+    top: 2%;
+    left: 3%;
+}
+
+.vertical-2 {
+    position: absolute;
+    width: 25px;
+    height: 68px;
+    border-radius: 50%;
+    border-left: 6px solid white;
+    border-bottom: 3px solid white;
+    top: -7%;
+    right: 4px;
+    transform: rotate(-18deg);
+}
+
+.horizontal-1 {
+    position: absolute;
+    width: 64px;
+    height: 26px;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    border-radius: 45%;
+    top: 1px;
+    right: 10px;
+    transform: rotate(-12deg);
+}
+
+.horizontal-2 {
+    position: absolute;
+    width: 70px;
+    height: 26px;
+    border-radius: 50%;
+    border-right: 2px solid white;
+    border-top: 6px solid white;
+    top: 54%;
+    left: 4px;
+    transform: rotate(-13deg);
+}
+
+.vertical, .horizontal {
+    width: 70px;
+    height: 71px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.logo .vertical {
+    position: absolute;
+    animation: vertical 4s ease;
+    filter: drop-shadow(1px 1px 5px rgb(255, 136, 24))
+    drop-shadow(1px 1px 5px rgb(238, 171, 0));
+}
+
+.logo .horizontal {
+    position: absolute;
+    animation: horizontal 4s ease;
+    filter: drop-shadow(1px 1px 5px rgb(255, 136, 24))
+    drop-shadow(1px 1px 5px rgb(238, 171, 0));
+}
+
+@keyframes vertical {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(360deg); }
+}
+
+@keyframes horizontal {
+    0% { transform: rotateZ(360deg); }
+    100% { transform: rotateZ(0deg); }
+}
+
+@keyframes transformScale {
+    0% { transform: scale(1); }
+    100% { 
+        transform: scale(1.2);
+        animation-play-state: paused;
+        animation-iteration-count: 0;
+    }
+}
+
+/**************************/
+.logo2{
+
+    animation: infinite 7.0s ease-in-out infinite ;
+}
+@keyframes infinite{
+    0%{
+        transform: none;
+        opacity: 10;
+        animation-delay: 5,5s;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+        
+        animation-delay: .2s;
+    }
+    40%{
+        opacity: 0.4;
+        
+        animation-delay:.15s ;
+
+    }
+    50%{
+        opacity: 0.5;
+        animation-delay: .20s;
+
+    }
+    60%{
+        opacity: 0.6;
+        
+        animation-delay:  .25s;
+    }
+    70%{
+        opacity: 0.7s;
+      
+        animation-delay:.3s ;
+
+    }
+    80%{
+        opacity: 0.8;
+        animation-delay: .4s;
+    }
+    90%{
+        opacity: 0.9s;
+        animation-delay: .4s;
+    }
+    100%{
+        transform: none;
+        opacity: 1;
+        animation-delay:.45s ;
+    }
+}
+
